@@ -1,0 +1,43 @@
+<!-- Gallery component template by David Fraga Laureano -->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Gallery Component</ion-title>
+  </ion-navbar>
+</ion-header>
+
+ 
+<ion-content padding>
+  <ion-segment color="primary">
+    <ion-segment-button value="regular">
+      Testing component
+    </ion-segment-button>
+  </ion-segment>
+ 
+  <div >
+    <!-- Responsive Layout with Ion Grid-->
+   <!--  <ion-grid >
+      <ion-row>
+        <ion-col col-6 col-md-4 col-xl-3 *ngFor="let image of images">
+          <div class="image-container" [style.background-image]="'url(../../assets/imgs/' + image.url + ')'" (click)="onSelect(image)"></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid> -->
+
+    <div class="images">
+	  <ion-card class="one-image" *ngFor="let image of images" (click)="onSelect(image)">
+	    <img src="../../assets/imgs/{{image.url}}" imageViewer>
+       <!-- <ion-card-content class="card-content card-content-sm">
+            <ion-card-title class="font">
+              <span class="mbr-gallery-title">{{image.title}}</span>
+            </ion-card-title>
+	     </ion-card-content> -->
+       <span class="mbr-gallery-title card-title">{{image.title}}</span>
+	  </ion-card>
+	</div>
+ 
+ 
+  </div>
+</ion-content>

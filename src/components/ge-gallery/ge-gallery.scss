@@ -1,0 +1,70 @@
+ge-gallery {
+
+	.images{
+		padding: 10px;
+	}
+	
+    .image-container {
+        min-height: 300px;
+        background-size: cover;
+    }
+
+    @media (min-width: 0px) {
+        .images {
+            column-count: 2;
+        }
+       	.mbr-gallery-title {
+	    	font-size: 0.4em;
+	    }
+	   .one-image:hover {       
+	       font-size: 0.8em;
+	    }
+    }
+ 
+    @media (min-width: 420px) {
+        .images {
+            column-count: 3;
+        }
+        .mbr-gallery-title {
+	    	font-size: 0.6em;
+	    }
+	    .one-image:hover {       
+	       font-size: 1.1em;
+	    }
+    }
+ 
+    @media (min-width: 720px) {
+        .images {
+            column-count: 4;
+        }
+    }
+ 
+    .one-image {
+        margin: 2px;
+        margin-bottom: 15px;
+        text-align: justify;
+          background: -webkit-linear-gradient(left, rgba(85, 67, 70, 0.85), rgba(69, 80, 91, 0.85)) !important;
+    }
+
+    .one-image:hover {       
+       box-shadow: 0 0 6px 4px rgba(29, 25, 25, 0.9);
+       font-size: 1.5em;
+    }
+
+
+	ion-card img{
+		display:inline;
+	}
+
+	   
+   
+   .mbr-gallery-title {
+	    font-size: 0.9em;
+	    width: 100%;
+	    padding: 1rem;
+	    color: #fff;	  
+	    -webkit-transition: .2s background ease-in-out;
+	    transition: .2s background ease-in-out;
+    }
+
+}
